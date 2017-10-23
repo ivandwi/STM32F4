@@ -1,0 +1,42 @@
+1. STM32F407VGT6 adalah sebuah microcontroller yang memiliki feature :
+   - 32 bit ARM Cortex
+   - flash memory sebesar 1 Mbyte
+   - RAM sebesar 192 di LQFP100 Package
+   - ARM mbed
+   - ada 3 interfaces :
+     - Virtual COM port 
+     - Mass storage
+     - Debug Port
+
+2. Menggunakan External Power Sources min 3 V dan max 5 V
+3. ada audio sensor MP45DT02
+4. ada 8 LED:
+   - LD1 (red/green) untuk komunikasi USB
+   - LD2 (red) untuk power on dengan source 3.3 V
+   - 4 user LEDs, LD3(orange), LD4(green), LD5(red), LD6(blue)
+   - 2 USB OTG LEDs LD7(green) VBUS and LD8(red) kalau over current
+
+5. ada 2 push button (user dan reset)
+6. ada USB OTG FS dengan micro-AB connector
+
+USB Connector:
+1. Board To PC         --> USB Cable Type A to mini B
+2. PC to CN5 connector --> USb Cable Type A to micro B
+
+untuk memulai :
+1. cek posisi jumper di board, JP1 on, CN3 on 
+2. connect board ke PC dengan USB cable type A to mini B lewat USB connector CN1 untuk memberikan sumber ke board. Red LED LD2 (PWR) menyala
+3. empat LEDs antara B1 dan B2 blinking
+4. tekan tombol user untuk enable ST MEMS Sensor
+
+conventions :
+1. Jumper JP1 ON         --> Jumper fitted
+2. Jumper JP1 OFF        --> Jumper not fitted
+3. Solder Bridge SBx ON  --> SBx connections closed by solder
+4. Solder bridge SBx OFF --> SBx connections left open
+
+jumper states
+1. Both CN3 jumpers ON   --> ST-LINK/V2 (or V2-A) functions enabled for on board programming (default)
+2. Both CN3 jumpers OFF  --> ST-LINK/V2 (or V2-A) functions enabled for applications through external CN2 connctor (SWD suported)
+
+ 
